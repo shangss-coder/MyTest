@@ -1,0 +1,125 @@
+﻿生成启动时间为 2019/8/13 17:54:15。
+     1>项目“C:\Users\Kevin\Desktop\WebServer\WebServer\WebServer.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“C:\Users\Kevin\Desktop\WebServer\WebServer\obj\x64\Debug\WebServer.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         Validating sources
+       _CopySources:
+         Copying sources remotely to '192.168.237.131'
+         Skipping 'C:\Users\Kevin\Desktop\WebServer\WebServer\main.c', as it is up to date.
+         Copying file 'C:\Users\Kevin\Desktop\WebServer\WebServer\server.c' to '/home/robin/projects/WebServer/server.c'
+         Copying file 'C:\Users\Kevin\Desktop\WebServer\WebServer\server.h' to '/home/robin/projects/WebServer/server.h'
+       _ValidateValidArchitecture:
+         Validating architecture
+         Current project architecture 'x64' is compatible with the remote system architecture 'x64' ('x64').
+       ClCompile:
+         Starting remote build
+         Compiling sources:
+         Invoking 'g++'
+         g++ -c -x c /home/robin/projects/WebServer/main.c -I /home/robin/projects/WebServer/../../../../../Linux/include -g2 -gdwarf-2 -o "/home/robin/projects/WebServer/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=gnu99
+         main.c
+         /home/robin/projects/WebServer/main.c: In function ‘main’:
+         /home/robin/projects/WebServer/main.c:17:24: warning: conversion to ‘short unsigned int’ from ‘int’ may alter its value [-Wconversion]
+           unsigned short port = atoi(argv[1]);
+                                 ^
+         
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning : conversion to ‘short unsigned int’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning :   unsigned short port = atoi(argv[1]);
+C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning :                         ^
+         Done compiling '/home/robin/projects/WebServer/main.c'
+         Invoking 'g++'
+         g++ -c -x c /home/robin/projects/WebServer/server.c -I /home/robin/projects/WebServer/../../../../../Linux/include -g2 -gdwarf-2 -o "/home/robin/projects/WebServer/obj/x64/Debug/server.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=gnu99
+         server.c
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning :   while ((len = recv(cfd, buf, sizeof(buf), 0)) > 0)
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning :                 ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning :     int lineLen = pt - reqMsg;
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning :                   ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning : conversion to ‘int’ from ‘__off_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning :    sendRespondHead(cfd, 200, "OK", getFileType(file), st.st_size);
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning :                                                       ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning :   while ((len = read(fd, buf, sizeof(buf))) > 0)
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning :                 ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning :    send(cfd, buf, len, 0);
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning :                   ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning : implicit declaration of function ‘isxdigit’ [-Wimplicit-function-declaration]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning :    if (from[0] == '%' && isxdigit(from[1]) && isxdigit(from[2]))
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning :                          ^
+     1>C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning :     *to = hexit(from[1]) * 16 + hexit(from[2]);
+C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning :           ^
+         Done compiling '/home/robin/projects/WebServer/server.c'
+         /home/robin/projects/WebServer/server.c: In function ‘getRequestLine’:
+         /home/robin/projects/WebServer/server.c:135:16: warning: conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+           while ((len = recv(cfd, buf, sizeof(buf), 0)) > 0)
+                         ^
+         /home/robin/projects/WebServer/server.c:150:18: warning: conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+             int lineLen = pt - reqMsg;
+                           ^
+         /home/robin/projects/WebServer/server.c: In function ‘parseRequestLine’:
+         /home/robin/projects/WebServer/server.c:218:54: warning: conversion to ‘int’ from ‘__off_t {aka long int}’ may alter its value [-Wconversion]
+            sendRespondHead(cfd, 200, "OK", getFileType(file), st.st_size);
+                                                               ^
+         /home/robin/projects/WebServer/server.c: In function ‘sendFile’:
+         /home/robin/projects/WebServer/server.c:252:16: warning: conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+           while ((len = read(fd, buf, sizeof(buf))) > 0)
+                         ^
+         /home/robin/projects/WebServer/server.c:255:18: warning: conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+            send(cfd, buf, len, 0);
+                           ^
+         /home/robin/projects/WebServer/server.c: In function ‘decode_str’:
+         /home/robin/projects/WebServer/server.c:419:25: warning: implicit declaration of function ‘isxdigit’ [-Wimplicit-function-declaration]
+            if (from[0] == '%' && isxdigit(from[1]) && isxdigit(from[2]))
+                                  ^
+         /home/robin/projects/WebServer/server.c:422:10: warning: conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+             *to = hexit(from[1]) * 16 + hexit(from[2]);
+                   ^
+         
+       Link:
+         Linking objects
+         Invoking 'ld'
+         g++ -o "/home/robin/projects/WebServer/bin/x64/Debug/WebServer.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/robin/projects/WebServer/obj/x64/Debug/main.o /home/robin/projects/WebServer/obj/x64/Debug/server.o
+         Done linking, output file name: '/home/robin/projects/WebServer/bin/x64/Debug/WebServer.out'
+         Copying file '/home/robin/projects/WebServer/bin/x64/Debug/WebServer.out' to 'C:\Users\Kevin\Desktop\WebServer\WebServer\bin\x64\Debug\WebServer.out'
+         WebServer.vcxproj -> C:\Users\Kevin\Desktop\WebServer\WebServer\bin\x64\Debug\WebServer.out
+       FinalizeBuildStatus:
+         正在删除文件“C:\Users\Kevin\Desktop\WebServer\WebServer\obj\x64\Debug\WebServer.tlog\unsuccessfulbuild”。
+         正在对“C:\Users\Kevin\Desktop\WebServer\WebServer\obj\x64\Debug\WebServer.tlog\WebServer.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\Kevin\Desktop\WebServer\WebServer\WebServer.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+       “C:\Users\Kevin\Desktop\WebServer\WebServer\WebServer.vcxproj”(Build 目标) (1) ->
+       (ClCompile 目标) -> 
+         C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning : conversion to ‘short unsigned int’ from ‘int’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning :   unsigned short port = atoi(argv[1]);
+       C:\Users\Kevin\Desktop\WebServer\WebServer\main.c(17,24): warning :                         ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning :   while ((len = recv(cfd, buf, sizeof(buf), 0)) > 0)
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(135,16): warning :                 ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning :     int lineLen = pt - reqMsg;
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(150,18): warning :                   ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning : conversion to ‘int’ from ‘__off_t {aka long int}’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning :    sendRespondHead(cfd, 200, "OK", getFileType(file), st.st_size);
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(218,54): warning :                                                       ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning :   while ((len = read(fd, buf, sizeof(buf))) > 0)
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(252,16): warning :                 ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning :    send(cfd, buf, len, 0);
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(255,18): warning :                   ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning : implicit declaration of function ‘isxdigit’ [-Wimplicit-function-declaration]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning :    if (from[0] == '%' && isxdigit(from[1]) && isxdigit(from[2]))
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(419,25): warning :                          ^
+         C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning :     *to = hexit(from[1]) * 16 + hexit(from[2]);
+       C:\Users\Kevin\Desktop\WebServer\WebServer\server.c(422,10): warning :           ^
+
+    8 个警告
+    0 个错误
+
+已用时间 00:00:04.33
